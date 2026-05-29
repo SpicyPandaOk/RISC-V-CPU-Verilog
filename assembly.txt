@@ -1,0 +1,9 @@
+addi x1, x0, 10 #putting 10 into the x1 register by adding x0 which is always 0
+addi x2, x0, 20 #same process but for x2 register with 20
+add x3, x2, x1 #testing adding x1 and x2, the result should be 30
+addi x4,x3, 20 #testing adding an immediate, the result should be 50
+sw x4, 2(x1) #testing storing a variable
+lw x5, 2(x1) #loading in that same variable to the next register
+beq x4, x5, 8 #checking if the two registers that just saved and loaded are the same and jumps over the NOP at the next adress if so
+add x0, x0, x0 #NOP, x0 can't be changed so this does nothing
+jal x6, 12 #adding 12 to the program counter 
